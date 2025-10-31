@@ -17,7 +17,7 @@ void main() {
         // pass `sessionBuilder` as a first argument. Refer to the docs on
         // how to use the `sessionBuilder` to set up different test scenarios.
         final greeting = await endpoints.greeting.hello(sessionBuilder, 'Bob');
-        expect(greeting.message, 'Hello Bob');
+        expect(greeting.$1.message, 'Hello Bob');
       },
     );
   });

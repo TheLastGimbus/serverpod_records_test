@@ -25,8 +25,8 @@ class EndpointGreeting extends _i1.EndpointRef {
   String get name => 'greeting';
 
   /// Returns a personalized greeting message: "Hello {name}".
-  _i2.Future<_i3.Greeting> hello(String name) =>
-      caller.callServerEndpoint<_i3.Greeting>(
+  _i2.Future<(_i3.Greeting, String)> hello(String name) =>
+      caller.callServerEndpoint<(_i3.Greeting, String)>(
         'greeting',
         'hello',
         {'name': name},
